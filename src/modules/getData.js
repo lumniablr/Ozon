@@ -1,8 +1,6 @@
-const getData = () => {
-    return fetch('https://ozontestby-default-rtdb.firebaseio.com/goods.json')
-        .then(response => response.json())
-        .then(json => console.log(json));
-
+const getData = (str) => {
+  return fetch(`http://localhost:3000/goods${str ? str : ''}`)
+    .then(response => response.json());
 };
 
 export default getData;
